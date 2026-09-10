@@ -28,7 +28,8 @@ public class ApiExceptionHandler {
             HttpServletRequest request
     ) {
         return response(
-                HttpStatus.INTERNAL_SERVER_ERROR,
+                //HttpStatus.INTERNAL_SERVER_ERROR,这里不对
+                HttpStatus.NOT_FOUND,
                 "BOOKING_NOT_FOUND",
                 exception.getMessage(),
                 request);
